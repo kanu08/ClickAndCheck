@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ClickAndCheck</string>
+    <string name="companyLogo">Company Logo</string>
+    <string name="lblLogin">Login</string>
+    <string name="txtEmailAddress">Email Address</string>
+    <string name="txtPassword">Password</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnLoginWithG">Login With Gmail</string>
+    <string name="lblRegister">New here? Register Now</string>
+    <string name="lblSign">Registered? Login here</string>
+    <string name="lblSignUp">Register</string>
+    <string name="txtFullName">Full Name</string>
+    <string name="btnRegister">Register</string>
+    <string name="btnRegGoogle">Register with Gmail</string>
+    <string name="txtPhone">Phone Number</string>
+</resources>
