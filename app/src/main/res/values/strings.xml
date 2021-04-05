@@ -13,4 +13,6 @@
     <string name="btnRegister">Register</string>
     <string name="btnRegGoogle">Register with Gmail</string>
     <string name="txtPhone">Phone Number</string>
+    <string name="ambient_temperature">Ambient Temperature</string>
+    <string name="soil_moisture">Soil Moisture</string>
 </resources>
