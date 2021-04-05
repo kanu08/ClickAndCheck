@@ -11,6 +11,12 @@
         android:theme="@style/Theme.FireLogin">
         <activity android:name=".home"></activity>
         <activity android:name=".SignUp" />
+        <activity
+            android:name=".tempHumidRecords"
+            android:parentActivityName=".soilActivity"/>
+        <activity
+            android:name=".soilActivity"
+            android:parentActivityName=".home" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
