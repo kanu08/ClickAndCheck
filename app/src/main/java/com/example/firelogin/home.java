@@ -4,17 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.firelogin.databinding.ActivityHomeBinding;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseUser;
 
 public class home extends AppCompatActivity {
 
@@ -78,6 +84,9 @@ public class home extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.settings:
                 break;
+            case R.id.changePwd:
+                changePwd();
+                break;
             case R.id.logout:
                 mAuth.signOut();
                 Intent intent= new Intent(home.this, MainActivity.class);
@@ -88,6 +97,41 @@ public class home extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    public void changePwd(){
+        EditText resetPwd= new EditText(home.this);
+        AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(home.this);
+        passwordResetDialog.setTitle("Change Password?");
+        passwordResetDialog.setMessage("Enter new Password");
+        passwordResetDialog.setView(resetPwd);
+        passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //extract the email and send the reset link
+                String newPwd= resetPwd.getText().toString();
+                FirebaseUser firebaseUser=mAuth.getCurrentUser();
+                firebaseUser.updatePassword(newPwd).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(home.this,"Password Changed successfully", Toast.LENGTH_LONG).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(home.this,"Password Not Changed", Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+        });
+        passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //close the dialog
+            }
+        });
+
+        passwordResetDialog.create().show();
     }
 
 }

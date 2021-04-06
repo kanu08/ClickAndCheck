@@ -8,6 +8,10 @@
         />
 
     <item
+        android:id="@+id/changePwd"
+        android:title="ChangePassword" />
+
+    <item
         android:id="@+id/logout"
         android:title="Logout"
 

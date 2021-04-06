@@ -9,14 +9,14 @@
     android:background="#FFFFFF"
     tools:context=".SignUp">
 
-    <androidx.appcompat.widget.Toolbar
+    <!--<androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBlue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" /> -->
 
     <EditText
         android:id="@+id/txtFullName"
@@ -102,40 +102,28 @@
         android:id="@+id/lblSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="92dp"
         android:fontFamily="sans-serif"
         android:text="@string/lblSignUp"
         android:textColor="#070707"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/txtFullName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="130dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/rounded_corners"
         android:text="@string/btnRegister"
-        android:textColor="#FFFFFF"
+        android:textColor="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btnRegGoogle"
-        android:layout_width="130dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="124dp"
-        android:background="@drawable/rounded_corners"
-        android:text="@string/btnRegGoogle"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
