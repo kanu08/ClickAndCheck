@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
-    int RC_SIGN_IN=40;
+    int RC_SIGN_IN=65;
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -179,6 +179,10 @@ public class MainActivity extends AppCompatActivity{
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent= new Intent(MainActivity.this, home.class);
+                            startActivity(intent);
+                            Toast.makeText(MainActivity.this,"Signed In with Google",Toast.LENGTH_SHORT).show();
+
                            // updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
