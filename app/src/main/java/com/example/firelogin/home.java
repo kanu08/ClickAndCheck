@@ -62,7 +62,9 @@ public class home extends AppCompatActivity {
         farmerCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(home.this, "Farmer Clicked", Toast.LENGTH_SHORT).show();
+                Intent captureimage = new Intent(home.this,ImageCapture.class);
+                startActivity(captureimage);
+                //Toast.makeText(home.this, "Farmer Clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
