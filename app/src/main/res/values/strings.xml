@@ -16,4 +16,7 @@
     <string name="txtPhone">Phone Number</string>
     <string name="ambient_temperature">Ambient Temperature</string>
     <string name="soil_moisture">Soil Moisture</string>
+    <string name="upload_image">Upload image</string>
+    <string name="take_image">Take image</string>
+    <string name="image_to_be_processed">image_to_be_processed</string>
 </resources>
