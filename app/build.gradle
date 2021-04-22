@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.firelogin"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -49,6 +49,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.loopj.android:android-async-http:1.4.11'
 
 
 }

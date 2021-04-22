@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.firelogin">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FireLogin">
-        <activity android:name=".home"></activity>
+        <activity android:name=".cityFinder"></activity>
+        <activity android:name=".weatherActivity" />
+        <activity android:name=".home" />
         <activity android:name=".SignUp" />
         <activity
             android:name=".tempHumidRecords"
-            android:parentActivityName=".soilActivity"/>
+            android:parentActivityName=".soilActivity" />
         <activity
             android:name=".soilActivity"
             android:parentActivityName=".home" />
