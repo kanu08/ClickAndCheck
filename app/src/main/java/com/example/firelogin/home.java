@@ -45,6 +45,8 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Toast.makeText(MainActivity.this, "Weather Clicked", Toast.LENGTH_SHORT).show();
+                Intent showWeath = new Intent(home.this,weatherActivity.class);
+                startActivity(showWeath);
             }
         });
 
