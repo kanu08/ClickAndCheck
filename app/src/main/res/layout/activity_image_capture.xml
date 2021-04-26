@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ImageCapture">
-
+    <Spinner android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <ImageView
         android:id="@+id/display_imageView"
         android:layout_width="300dp"
@@ -22,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:text="@string/take_image" />
+        android:text="@string/take_image"
+        android:onClick="launchCamera"/>
 
     <Button
         android:id="@+id/gallery"
@@ -31,7 +40,18 @@
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:text="@string/upload_image"
+        android:onClick="moveToActivity"/>
 
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="fill_parent"
+        android:layout_height="58.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="8.0dip"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/display_imageView" />
 
-        />
 </LinearLayout>
